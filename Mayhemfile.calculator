@@ -7,6 +7,11 @@ target: calculator
 # Base image to run the binary in.
 image: dbrumley/calculator:latest
 
+tasks:
+  - name: regression_testing
+  - name: behavior_testing
+  - name: coverage_analysis
+
 advanced_triage: false
 
 # Calculator reads from stdin, so we specify /build/calculator
