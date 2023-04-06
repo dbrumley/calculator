@@ -48,7 +48,7 @@ jobs:
         with:
           mayhem-url: ${{ secrets.MAYHEM_URL }}
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }} --file Mayhemfile.mayhem_tests --duration 600
+          args: --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.BRANCH_NAME }} --file Mayhemfile.calculator --duration 60
           sarif-output: sarif
           junit-output: junit
           coverage-output: coverage
