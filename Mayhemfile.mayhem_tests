@@ -1,0 +1,21 @@
+# Project name that the target belongs to
+project: calculator
+
+# Target name (should be unique within the project)
+target: mayhem_tests
+
+# Base image to run the binary in.
+image: dbrumley/calculator:latest
+
+advanced_triage: false
+
+tasks:
+  - name: regression_testing
+  - name: behavior_testing
+  - name: coverage_analysis
+
+
+# Calculator reads from stdin, so we specify /build/calculator
+# and mayhem will supply the security tests
+cmds:
+  - cmd: /build/mayhem_tests
