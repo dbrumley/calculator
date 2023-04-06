@@ -36,6 +36,13 @@ jobs:
       - name: Make and run tests
         run: make tests
 
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          gcov: true
+          flags: unit-tests
+          gcov_include: calculator.c
+
       - name: Quick Mayhem property checking and coverage testing
         uses: ForAllSecure/mcode-action@v1
         with:
