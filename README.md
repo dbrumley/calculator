@@ -21,8 +21,8 @@ Check out the PR to see how Mayhem works by:
   Property testing extends unit testing to check that all variations of a test
   satisfy an output condition.
 
-  For example, Mayhem can check "A _ B / A = B", while normal unit tests can only check specific cases
-  like "3 _ 2 / 3 = 2".
+  For example, Mayhem can check "A * B / A = B", while normal unit tests can only check specific cases
+  like "3 * 2 / 3 = 2".
 
 # Quick start
 
