@@ -1,0 +1,13 @@
+image: dbrumley/calculator # fields are unnecessary
+duration: 90 # since they will
+project: dbrumley/calculator # be filled at
+target: calculator # run creation time
+advanced_triage: true
+tasks:
+  - name: exploitability_factors
+  - name: regression_testing
+  - name: behavior_testing
+  - name: coverage_analysis
+cmds:
+  - cmd: /build/test/test_driver # Reads from stdin, which Mayhem populates.
+    env: {}
