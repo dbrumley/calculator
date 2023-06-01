@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
   int uflag = 0;
   int verbose = 0;
   
-  if(argv[1][0] == 'v') { vflag = 1; } 
+  if(argv[1][0] == 'v') { verbose = 1; } 
   if(argv[1][0] == 'u') { uflag = 1; } 
 
   if(mflag) { mayhem_tests(verbose); } // do mayhem tests
