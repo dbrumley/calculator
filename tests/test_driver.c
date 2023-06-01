@@ -28,19 +28,13 @@ int mayhem_tests(int verbose) {
   int left, right, result;
   char op;
 
-  if(scanf("%d %d %d", &op, &left, &right) != 3) {
+  if(scanf("%d %c %d", &left, &op, &right) != 3) {
     printf("Not enough inputs given\n");
     return -1;   
   }
 
-  switch(op) {
-    case '+': result = add(left, right); break;
-    case '-': result = subtract(left, right); break;
-    case '*': result = multiply(left, right); break;
-    case '/': result = divide(left, right); break;
-    case '=': result =  (left == right); break;
-    default:  property_tests(left, right);
-  }
+  result = eval(left, right, op);
+  property_tests(left, right);
 
   if(verbose) {
     printf("%d %c %d = %d\n", left, op, right, result);
