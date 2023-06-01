@@ -33,8 +33,14 @@ int mayhem_tests(int verbose) {
     return -1;   
   }
 
-  result = eval(op, left, right);
-  property_tests(left, right);
+  switch(op) {
+    case '+': result = add(left, right); break;
+    case '-': result = subtract(left, right); break;
+    case '*': result = multiply(left, right); break;
+    case '/': result = divide(left, right); break;
+    case '=': result =  (left == right); break;
+    default:  property_tests(left, right);
+  }
 
   if(verbose) {
     printf("%d %c %d = %d\n", left, op, right, result);
