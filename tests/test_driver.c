@@ -33,7 +33,7 @@ int mayhem_tests(int verbose) {
     return -1;   
   }
 
-  result = eval(left, right, op);
+  result = eval(op, left, right);
   property_tests(left, right);
 
   if(verbose) {
