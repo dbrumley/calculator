@@ -28,7 +28,7 @@ int mayhem_tests(int verbose) {
   int left, right, result;
   char op;
 
-  if(scanf("%c %d %d", &op, &left, &right) != 3) {
+  if(scanf("%d %d %d", &op, &left, &right) != 3) {
     printf("Not enough inputs given\n");
     return -1;   
   }
