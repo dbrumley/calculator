@@ -35,7 +35,7 @@ int mayhem_tests(int verbose) {
 
   property_tests(left, right);
   
-  result = eval(left, right, op);
+  result = eval(op, left, right);
   if(verbose) {
     printf("%d %c %d = %d\n", left, op, right, result);
   }

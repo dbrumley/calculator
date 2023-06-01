@@ -1,7 +1,3 @@
-image: dbrumley/calculator # fields are unnecessary
-duration: 90 # since they will
-project: dbrumley/calculator # be filled at
-target: calculator # run creation time
 advanced_triage: true
 tasks:
   - name: exploitability_factors
