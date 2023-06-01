@@ -27,7 +27,7 @@ int eval(char op, int left, int right) {
     case '-': return subtract(left, right);
     case '*': return multiply(left, right);
     case '/': return divide(left, right);
-    case '=': return (left == right);
+    case '=': return equal(left, right);
     default: return 0;
   }
 }
