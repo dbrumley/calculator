@@ -1,0 +1,10 @@
+target: calculator
+advanced_triage: true
+tasks:
+  - name: exploitability_factors
+  - name: regression_testing
+  - name: behavior_testing
+  - name: coverage_analysis
+cmds:
+  - cmd: /build/tests/test_driver -m # Reads from stdin, which Mayhem populates.
+    env: {}
