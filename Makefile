@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS += -g
+CFLAGS += -g -O2
 SRC := src
 TARGET := calculator
 TEST := tests
