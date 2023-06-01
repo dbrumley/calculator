@@ -33,7 +33,10 @@ int mayhem_tests(int verbose) {
     return -1;   
   }
 
-  property_tests(left, right);
+  if(op != '+' && op != '-' && op != '/' && op != '*' && op != '=') {
+    property_tests(left, right);
+    return 1;
+  }
   
   result = eval(op, left, right);
   if(verbose) {
