@@ -46,23 +46,15 @@ int mayhem_tests(int verbose) {
 // DEMO PURPOSES: a small driver to switch
 // on and off different types of testing
 int main(int argc, char *argv[]) {
-  int mflag = 0;
+  int mflag = 1;
   int uflag = 0;
   int verbose = 0;
-  char c;
   
-  opterr = 0;
+  if(argv[1][0] == 'v') { vflag = 1; } 
+  if(argv[1][0] == 'u') { uflag = 1; } 
 
-  while ((c = getopt (argc, argv, "umv")) != -1) {
-    switch(c) {
-      case 'u': uflag = 1; break; // unit tests
-      case 'm': mflag = 1; break; // mayhem tests
-      case 'v': verbose = 1; break; // verbose
-    }
-  }
-
-  if(uflag) { unit_tests(); } // do unit test
   if(mflag) { mayhem_tests(verbose); } // do mayhem tests
+  if(uflag) { unit_tests(); } // do unit test
 
   return 0;
 }
